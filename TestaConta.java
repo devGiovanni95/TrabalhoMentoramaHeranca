@@ -46,7 +46,7 @@ public class TestaConta {
     ContaSalario cs1 = new ContaSalario(33,3, "Banco Inter", 10.00, 50,20);
         System.out.println("O saldo da conta poupança é de R$ " + cs1.getSaldo());
 
-                if (cs1.getSaldo() >= cs1.getSacar()){
+                if (cs1.getSaldo() >= cs1.getSacar() || cs1.getSacar() >= 2 ){
                 System.out.println("Saldo da conta atual depois do saque R$ " + (cs1.getSaldo() - cs1.getSacar()));
                 }else {
                 System.out.println("Valor de saque indisponivel por falta de saldo na conta. Valor de saque disponivel R$ "+ p1.getSaldo());
@@ -57,7 +57,6 @@ public class TestaConta {
                 }else {
                 System.out.println("Deposito efetuado com sucesso. Seu saldo após deposito R$ "+ (cs1.getSaldo() + cs1.depositar));
                 }
-                // System.out.println("Deposito efetuado com sucesso. Seu saldo após deposito R$ "+ (p1.getSaldo() + p1.depositar));
 
                 System.out.println("Saldo atualizado é de R$ " + p1.getSaldoAtualizado());
                 }

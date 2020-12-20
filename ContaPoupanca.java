@@ -11,7 +11,7 @@ public class ContaPoupanca extends Conta {
         } else {
             taxaDeJuros = 0.01;
         }
-        ;
+
     }
 
 //    public ContaPoupanca(int numero, int agencia, String banco, double saldo, int diaAniversario, double taxaDeJuros) {

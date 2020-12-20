@@ -1,17 +1,17 @@
 public class ContaSalario extends Conta {
-
-//    public ContaSalario(int numero, int agencia, String banco, double saldo) {
-//        super(numero, agencia, banco, saldo);
-//    }
-
-
+    private int Saques = 2;
 
     public ContaSalario(int numero, int agencia, String banco, double saldo, double sacar, double depositar) {
         super(numero, agencia, banco, saldo, sacar, depositar);
-//        int[] quantidadeSaque = new int[1];
-//        for(int i = 0; i < quantidadeSaque.length; i++){
-//
-//        }
+        this.sacar = this.Saques;
+    }
+
+    public void Comparador{
+    if (getSaldo() >= getSacar() || getSacar() >= 2 ){
+        System.out.println("Saldo da conta atual depois do saque R$ " + (getSaldo() - getSacar()));
+    }else {
+        System.out.println("Valor de saque indisponivel por falta de saldo na conta. Valor de saque disponivel R$ "+ getSaldo());
+    }
     }
 
     @Override
