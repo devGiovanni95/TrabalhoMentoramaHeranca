@@ -1,17 +1,21 @@
 public class ContaSalario extends Conta {
-    private int Saques = 2;
+    protected double saque2 = 2;
 
-    public ContaSalario(int numero, int agencia, String banco, double saldo, double sacar, double depositar) {
+    public ContaSalario(int numero, int agencia, String banco, double saldo, double sacar, double depositar, double saque2) {
         super(numero, agencia, banco, saldo, sacar, depositar);
-        this.sacar = this.Saques;
+        this.saque2 = saque2;
     }
 
-    public void Comparador{
-    if (getSaldo() >= getSacar() || getSacar() >= 2 ){
-        System.out.println("Saldo da conta atual depois do saque R$ " + (getSaldo() - getSacar()));
-    }else {
-        System.out.println("Valor de saque indisponivel por falta de saldo na conta. Valor de saque disponivel R$ "+ getSaldo());
-    }
+    @Override
+    public String toString() {
+        return "ContaSalario{" +
+                "saque2=" + saque2 +
+                ", saldo=" + saldo +
+                ", sacar=" + sacar +
+                ", depositar=" + depositar +
+                ", saldoAtualizado=" + saldoAtualizado +
+                ", saldoAtualizado2=" + saldoAtualizado2 +
+                '}';
     }
 
     @Override
@@ -32,7 +36,22 @@ public class ContaSalario extends Conta {
 
     @Override
     public double getSaldoAtualizado() {
-        return  (this.getSaldo() + this.depositar - this.getSacar());
+        if (getSacar() <= getSaldo()) {
+            return this.getSaldo() + this.depositar - this.getSacar();
+        } else {
+            return this.getSaldo() + this.depositar;
+        }
     }
 
+    public double getSaldoAtualizado2() {
+        if (getSaque2() <= getSaldoAtualizado()) {
+            return this.getSaldoAtualizado() - this.getSaque2();
+        } else {
+            return this.getSaldoAtualizado();
+        }
+    }
+
+    public double getSaque2() {
+        return saque2;
+    }
 }

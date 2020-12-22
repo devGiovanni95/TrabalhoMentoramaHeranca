@@ -5,11 +5,6 @@ public class ContaCorrente extends Conta{
         super(numero, agencia, banco, saldo, sacar, depositar);
         this.chequeEspecial = chequeEspecial;
     }
-//    public ContaCorrente(int numero, int agencia, String banco, double saldo, double chequeEspecial) {
-//        super(numero, agencia, banco, saldo, sacar);
-//        this.chequeEspecial = chequeEspecial;
-//    }
-
 
     @Override
     public String toString() {
@@ -43,5 +38,10 @@ public class ContaCorrente extends Conta{
         }else {
             return this.getSaldo() + this.depositar;
         }
+    }
+
+    @Override
+    public double getSaldoAtualizado2() {
+        return this.getSaldoAtualizado2();
     }
 }

@@ -14,11 +14,17 @@ public class ContaPoupanca extends Conta {
 
     }
 
-//    public ContaPoupanca(int numero, int agencia, String banco, double saldo, int diaAniversario, double taxaDeJuros) {
-//        super(numero, agencia, banco, saldo);
-//        this.diaAniversario = diaAniversario;
-//        this.taxaDeJuros = taxaDeJuros;
-//    }
+    @Override
+    public String toString() {
+        return "ContaPoupanca{" +
+                "diaAniversario=" + diaAniversario +
+                ", taxaDeJuros=" + taxaDeJuros +
+                ", saldo=" + saldo +
+                ", sacar=" + sacar +
+                ", depositar=" + depositar +
+                ", saldoAtualizado=" + saldoAtualizado +
+                '}';
+    }
 
 
     @Override
@@ -44,5 +50,12 @@ public class ContaPoupanca extends Conta {
             return this.getSaldo() + this.depositar;
         }
     }
+
+    @Override
+    public double getSaldoAtualizado2() {
+        return this.saldoAtualizado2;
+    }
+
+
 }
 
